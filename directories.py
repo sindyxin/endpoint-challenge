@@ -42,8 +42,8 @@ def create_directory(directory:str) -> None:
   
   
 def move_directory(current_path:str, target_path:str) -> None:
-  valid_current_path = valify_directory(current_path)
-  valid_target_path = valify_directory(target_path)
+  valid_current_path = verify_directory(current_path)
+  valid_target_path = verify_directory(target_path)
   if valid_current_path and valid_target_path:
     # if prefer not use os.path.basename in this challenge, can use basename=current_path.split('/')[-1]
     basename = os.path.basename(current_path)
@@ -61,7 +61,7 @@ def move_directory(current_path:str, target_path:str) -> None:
   
 
 def delete_directory(directory:str) -> None:
-  valid_directory = valify_directory(directory)
+  valid_directory = verify_directory(directory)
   if valid_directory:
     DIRECTORIES_PATH.remove(directory)
     if directory in DIRECTORIES:
@@ -71,7 +71,7 @@ def delete_directory(directory:str) -> None:
         DIRECTORIES_PATH.remove(value)
 
 
-def valify_directory(directory:str) -> bool:
+def verify_directory(directory:str) -> bool:
   valid_directory = True
   root = directory.split('/')[0]
   if root  not in DIRECTORIES:
