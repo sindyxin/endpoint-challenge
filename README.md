@@ -7,13 +7,13 @@ Implement commands that allow a user to create, move and delete directories.
 Check if python have installed in local
 
 ```bash
-python3 --version
+python --version
 ```
 
 or
 
 ```bash
-python --version
+python3 --version
 ```
 
 Any version of Python can be downloaded from Python Software Foundation website at python.org.
@@ -23,13 +23,13 @@ Any version of Python can be downloaded from Python Software Foundation website 
 Open terminal and then type in python, or python3 depending on your Python installation, and python file name with .py then hit Enter.
 
 ```bash
-python3 directories.py
+python directories.py
 ```
 
 or
 
 ```bash
-python directories.py
+python3 directories.py
 ```
 
 ## Output
